@@ -30,7 +30,7 @@ class ProductService:
         category  = self.category_repository.get_by_id(product_data.category_id)
         if not category:
             raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
+                status_code=status.HTTP_400_BAD_REQUEST,
                 detail=f"Category with id {product_data.category_id} not found"
             )
         product = self.product_repository.create(product_data)
