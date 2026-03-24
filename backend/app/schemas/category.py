@@ -10,7 +10,7 @@ class CategoryBase(BaseModel):
 class CategoryCreate(CategoryBase):
     pass
 
-class CategoruResponse(CategoryBase):
+class CategoryResponse(CategoryBase):
     id: int = Field (..., description="Unique category if")
 
     class Config:

@@ -41,7 +41,7 @@ class CartService:
                 detail=f"Product with id {product_id} was not found"
             )
 
-        def cart_data[product_id]
+        del cart_data[product_id]
         return cart_data
 
     def get_add_details(self, cart_data: Dict[int, int]) -> CartResponse:
