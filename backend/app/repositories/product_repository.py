@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session, joinedload
 from typing import List, Optional
-from ..models.category import Product
-from ..schemas.category import PruductCreate
+from ..models.product import Product
+from ..schemas.product import ProductCreate
 
 class ProductRepository:
     def __init__(self, db: Session):
@@ -27,7 +27,7 @@ class ProductRepository:
             .all()
         )
 
-    def create(self, product_data: PruductCreate) -> Product:
+    def create(self, product_data: ProductCreate) -> Product:
         db_product = Product(**product_data.model_dump())
         self.db.add(product_data)
         self.db.commit()

@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 from typing import List
 
 from ..models import Category
-from ..repositories.category_repository import CategoryRepository
+from ..repositories.category_repositories import CategoryRepository
 from ..schemas.category import CategoryResponse, CategoryCreate
 from fastapi import HTTPException, status
 
