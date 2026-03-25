@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@500;700;800&display=swap');
+
+:root {
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1d1b1b;
+  background:
+    radial-gradient(circle at top left, rgba(255, 107, 53, 0.14), transparent 35%),
+    radial-gradient(circle at top right, rgba(15, 198, 183, 0.14), transparent 28%),
+    linear-gradient(180deg, #fff4e5, #f7eadf 52%, #f4e1d0);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --paper: #fffaf2;
+  --paper-strong: #fff4e8;
+  --ink: #1d1b1b;
+  --muted: #6f6156;
+  --accent: #ff6b35;
+  --accent-deep: #ca4a2c;
+  --teal: #0fc6b7;
+  --gold: #f3b63a;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    linear-gradient(90deg, rgba(29, 27, 27, 0.03) 1px, transparent 1px),
+    linear-gradient(rgba(29, 27, 27, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at top left, rgba(255, 107, 53, 0.14), transparent 35%),
+    radial-gradient(circle at top right, rgba(15, 198, 183, 0.14), transparent 28%),
+    linear-gradient(180deg, #fff4e5, #f7eadf 52%, #f4e1d0);
+  background-size:
+    36px 36px,
+    36px 36px,
+    auto,
+    auto,
+    auto;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.34), transparent 22%),
+    radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.22), transparent 20%);
+  opacity: 0.8;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+}
+
+h1 {
+  font-size: clamp(3.5rem, 9vw, 7.4rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4vw, 3.4rem);
+}
+
+h3 {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+p {
+  margin: 0;
+  color: var(--muted);
+}
+
+::selection {
+  background: rgba(255, 107, 53, 0.22);
+  color: var(--ink);
+}
